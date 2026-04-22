@@ -1,0 +1,41 @@
+<h1>Task 8 — Интеграция UI библиотек</h1>
+
+<h2>CommonJS библиотека: Notiflix</h2>
+<div class="buttons">
+  <button (click)="showSuccess()">Success</button>
+  <button (click)="showFailure()">Failure</button>
+  <button (click)="showInfo()">Info</button>
+  <button (click)="showWarning()">Warning</button>
+</div>
+
+<hr>
+
+<h2>ngx библиотека: ngx-mask</h2>
+
+<div class="form-block">
+  <label for="phone">Телефон</label>
+
+  <input
+    id="phone"
+    type="text"
+    mask="+0 (000) 000-00-00"
+    [(ngModel)]="phone"
+    placeholder="+7 (999) 123-45-67"
+  />
+
+  <p>Значение: {{ phone }}</p>
+</div>
+
+<div class="form-block">
+  <label for="card">Номер карты</label>
+
+  <input
+    id="card"
+    type="text"
+    mask="0000 0000 0000 0000"
+    [(ngModel)]="card"
+    placeholder="1234 5678 9012 3456"
+  />
+
+  <p>Значение: {{ card }}</p>
+</div>
